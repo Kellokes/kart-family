@@ -1,0 +1,82 @@
+[
+ {
+  "id": "barba",
+  "nome": "Barbudo",
+  "imagem": "limpos/01_personagem_adulto_barba.png",
+  "modelo": "modelos/barba.glb",
+  "peso": "pesado",
+  "velocidade": 4,
+  "aceleracao": 2,
+  "controle": 3
+ },
+ {
+  "id": "menino",
+  "nome": "Craque",
+  "imagem": "limpos/02_menino_brasil.png",
+  "modelo": "modelos/menino.glb",
+  "peso": "leve",
+  "velocidade": 2,
+  "aceleracao": 5,
+  "controle": 4
+ },
+ {
+  "id": "menina",
+  "nome": "Lacinho",
+  "imagem": "limpos/03_menina_laco.png",
+  "modelo": "modelos/menina.glb",
+  "peso": "leve",
+  "velocidade": 2,
+  "aceleracao": 4,
+  "controle": 5
+ },
+ {
+  "id": "oculos",
+  "nome": "Óculos",
+  "imagem": "limpos/04_mulher_oculos.png",
+  "modelo": "modelos/oculos.glb",
+  "peso": "medio",
+  "velocidade": 3,
+  "aceleracao": 3,
+  "controle": 4
+ },
+ {
+  "id": "joinha",
+  "nome": "Joinha",
+  "imagem": "limpos/05_homem_preto.png",
+  "modelo": "modelos/joinha.glb",
+  "peso": "medio",
+  "velocidade": 4,
+  "aceleracao": 3,
+  "controle": 3
+ },
+ {
+  "id": "celular",
+  "nome": "Conectado",
+  "imagem": "limpos/06_homem_camisa_clara.png",
+  "modelo": "modelos/celular.glb",
+  "peso": "pesado",
+  "velocidade": 5,
+  "aceleracao": 2,
+  "controle": 2
+ },
+ {
+  "id": "laranja",
+  "nome": "Laranjinha",
+  "imagem": "limpos/07_mulher_blusa_laranja.png",
+  "modelo": "modelos/laranja.glb",
+  "peso": "medio",
+  "velocidade": 3,
+  "aceleracao": 4,
+  "controle": 3
+ },
+ {
+  "id": "cacheada",
+  "nome": "Cachinhos",
+  "imagem": "limpos/08_mulher_cacheada.png",
+  "modelo": "modelos/cacheada.glb",
+  "peso": "medio",
+  "velocidade": 3,
+  "aceleracao": 3,
+  "controle": 4
+ }
+]

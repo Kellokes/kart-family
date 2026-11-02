@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#1b1f3b">
+<title>Kart Family</title>
+<link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+<canvas id="gl"></canvas>
+
+<!-- MENU PRINCIPAL -->
+<section id="scr-menu" class="screen active">
+  <div class="panel center">
+    <h1 class="logo">Kart<span>Family</span></h1>
+    <p class="sub">Corrida em família, contra bots</p>
+    <div class="col">
+      <button class="big" data-go="mode">Jogar</button>
+      <button class="ghost" data-go="help">Como jogar</button>
+    </div>
+  </div>
+</section>
+
+<!-- MODO -->
+<section id="scr-mode" class="screen">
+  <div class="panel center">
+    <h2>Escolha o modo</h2>
+    <div class="modes">
+      <button class="mode-card" data-mode="easy">
+        <b>Fácil</b>
+        <span>O kart acelera sozinho. Vire inclinando o celular como um volante.</span>
+      </button>
+      <button class="mode-card" data-mode="hard">
+        <b>Difícil</b>
+        <span>Você acelera, freia e vira com o joystick na tela.</span>
+      </button>
+    </div>
+    <div class="row">
+      <label>Bots <select id="opt-bots"><option>3</option><option>5</option><option selected>7</option></select></label>
+      <label>Voltas <select id="opt-laps"><option>2</option><option selected>3</option><option>5</option></select></label>
+      <label>Nível <select id="opt-diff"><option value="0">Tranquilos</option><option value="1" selected>Normais</option><option value="2">Feras</option></select></label>
+    </div>
+    <button class="ghost" data-go="menu">Voltar</button>
+  </div>
+</section>
+
+<!-- PERSONAGEM -->
+<section id="scr-char" class="screen">
+  <div class="panel wide">
+    <h2>Escolha seu piloto</h2>
+    <div id="chars" class="chars"></div>
+    <div class="row end">
+      <button class="ghost" data-go="mode">Voltar</button>
+      <button class="big" id="btn-race" disabled>Correr!</button>
+    </div>
+  </div>
+</section>
+
+<!-- AJUDA -->
+<section id="scr-help" class="screen">
+  <div class="panel center">
+    <h2>Como jogar</h2>
+    <ul class="help">
+      <li><b>Fácil:</b> segure o celular deitado e incline para os lados para virar. O kart acelera sozinho.</li>
+      <li><b>Difícil:</b> joystick à esquerda para virar, botões à direita para acelerar e frear (segure frear para dar ré).</li>
+      <li><b>Computador:</b> setas ou WASD. Espaço também freia.</li>
+      <li>Passe pelas faixas amarelas da pista para ganhar turbo. Fora do asfalto o kart fica lento.</li>
+    </ul>
+    <button class="ghost" data-go="menu">Voltar</button>
+  </div>
+</section>
+
+<!-- CARREGANDO -->
+<section id="scr-load" class="screen">
+  <div class="panel center">
+    <h2>Preparando a pista...</h2>
+    <div class="bar"><i id="load-bar"></i></div>
+  </div>
+</section>
+
+<!-- HUD -->
+<section id="hud" class="screen hud">
+  <div class="hud-top">
+    <div class="pos" id="hud-pos">1º<small>/8</small></div>
+    <div class="info">
+      <div id="hud-lap">Volta 1/3</div>
+      <div id="hud-time">0:00.0</div>
+    </div>
+    <button class="pause" id="btn-pause" aria-label="Pausar">II</button>
+  </div>
+  <canvas id="minimap" width="160" height="160"></canvas>
+  <div class="speed" id="hud-speed">0 <small>km/h</small></div>
+  <div id="countdown" class="countdown"></div>
+  <div id="toast" class="toast"></div>
+  <div id="tilt-ind" class="tilt"><i></i></div>
+  <!-- controles do modo difícil -->
+  <div id="ctl-hard" class="ctl">
+    <div id="joy" class="joy"><i id="joy-knob"></i></div>
+    <div class="pedals">
+      <button id="btn-brake" class="pedal brake">FREIO</button>
+      <button id="btn-gas" class="pedal gas">ACELERAR</button>
+    </div>
+  </div>
+</section>
+
+<!-- PAUSA -->
+<section id="scr-pause" class="screen">
+  <div class="panel center">
+    <h2>Pausado</h2>
+    <div class="col">
+      <button class="big" id="btn-resume">Continuar</button>
+      <button class="ghost" id="btn-recal">Recalibrar inclinação</button>
+      <button class="ghost" id="btn-invert">Inverter inclinação</button>
+      <button class="ghost" id="btn-restart">Reiniciar corrida</button>
+      <button class="ghost" id="btn-quit">Sair para o menu</button>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTADO -->
+<section id="scr-result" class="screen">
+  <div class="panel center">
+    <h2 id="res-title">Resultado</h2>
+    <ol id="res-list" class="results"></ol>
+    <div class="row">
+      <button class="big" id="btn-again">Correr de novo</button>
+      <button class="ghost" id="btn-menu">Menu</button>
+    </div>
+  </div>
+</section>
+
+<div id="rotate" class="rotate">Gire o celular para jogar deitado</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
